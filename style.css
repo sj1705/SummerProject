@@ -381,7 +381,7 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding: 3px;
-    padding-top: 10px;
+    padding-top: 100px;
   }
   .topsidebar{
     margin: 0;
