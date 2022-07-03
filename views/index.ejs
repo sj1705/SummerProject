@@ -52,7 +52,11 @@
           <div class="navbar-nav ms-auto">
             <a class="nav-link active font-weight-bold" aria-current="page" href="#">Home</a>
             <a class="nav-link font-weight-bold" href="#">List Your Buisness</a>
-            <a class="nav-link font-weight-bold" href="/signup">Sign Up/Sign In</a>
+<% if ( displayName  === "Sign Up/Sign In" ){ %>
+            <a class="nav-link font-weight-bold" href="/signup"><%= displayName %></a>
+<% } else{ %>
+            <a class="nav-link font-weight-bold" href="#"><%= displayName %></a>
+<% } %>
           </div>
         </div>
       </div>
