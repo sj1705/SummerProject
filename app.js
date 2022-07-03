@@ -5,8 +5,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const _ = require("lodash");
-mongoose.connect("mongodb+srv://admin:setuservice@cluster0.4pjko.mongodb.net/?retryWrites=true&w=majority/todolistDB", {
-  useNewUrlParser: true
+mongoose.connect("mongodb+srv://admin:setuservice@cluster0.4pjko.mongodb.net/?retryWrites=true&w=majority", {useNewUrlParser: true
 });
 
 app.use(bodyParser.urlencoded({
@@ -25,7 +24,7 @@ const customerSchema = {
 };
 const Customer = mongoose.model('Customer', customerSchema);
 var displayName = "Sign Up/Sign In";
-var failureName = " ERROR ";
+var message = "";
 
 app.get("/signup", function(req, res) {
   res.render("signup");
@@ -41,15 +40,16 @@ app.post("/signup", function(req, res) {
     email: req.body.email
   }, function(err, foundCustomer) {
     if (!err) {
-      if (foundCustomer.name == {}) {
-        customerInfo.save();
-        // res.render("success");
+      if (foundCustomer == null) {
+         customerInfo.save();
+         message = "You Signed Up...";
       } else {
-        failureName = " email already exists in our record... ";
+        message = " email already exists in our record... ";
       }
     }
-res.render("failure", {failureName: failureName});  });
- });
+    res.render("message",{message:message});
+  });
+});
 app.post("/signin", function(req, res) {
   Customer.findOne({
     email: req.body.email1
@@ -62,18 +62,15 @@ app.post("/signin", function(req, res) {
     res.redirect("/");
   });
 });
-// console.log(displayName);
 app.get("/", function(req, res) {
   res.render("index", {
     displayName: displayName
   });
 });
-app.post("/success", function(req, res) {
+app.post("/message", function(req, res) {
   res.redirect("/");
 });
-app.post("/failure", function(req, res) {
-  res.redirect("/");
-});
+
 
 app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running at 3000");
