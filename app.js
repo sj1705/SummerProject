@@ -22,6 +22,9 @@ const customerSchema = {
   password: String,
   data: String
 };
+const vendorSchema = {
+
+};
 const Customer = mongoose.model('Customer', customerSchema);
 var displayName = "Sign Up/Sign In";
 var message = "";
@@ -66,6 +69,8 @@ app.get("/", function(req, res) {
   res.render("index", {
     displayName: displayName
   });
+  // console.log(req.body.inputBox.value);
+
 });
 app.post("/message", function(req, res) {
   res.redirect("/");
