@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/vendor-style.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<script src="cities.js"></script>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <img class="logo" src="assets/logo.png" alt="">
+            <a class="navbar-brand" href="/">Service<span class="Setu">Setu</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <form id="regForm" action="/vendor-signup" method="post" enctype="multipart/form-data">
+        <center>
+            <h2>Vendor Sign-up Process</h2>
+            <p>In order to list your business, you have to complete this verification process</p>
+        </center>
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin:40px 0px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+        <!-- One "tab" for each step in the form: -->
+        <div class="tab container">
+            <center>
+                <h3>Business Info.</h3>
+            </center>
+            <div class="row">
+                <div class="col-md-6">
+                    <select name="ServiceName" id="" class="form-control">
+                        <option value="B2B">B2B</option>
+                        <option value="Real-Estate">Real Estate</option>
+                        <option value="Tickets">Tickets</option>
+                        <option value="Anything-on-Hire">Anything on Hire</option>
+                        <option value="Loans">Loans</option>
+                        <option value="Auto-care">Auto care</option>
+                        <option value="Automobile">Automobile</option>
+                        <option value="Baby-Care">Baby Care</option>
+                        <option value="Banquets">Banquets</option>
+                        <option value="Bills-Recharge">Bills & Recharge</option>
+                        <option value="Book-Hotel">Book Hotel</option>
+                        <option value="Pest-Control">Pest Control</option>
+                        <option value="Bus">Bus</option>
+                        <option value="Cabs-Car-rentals">Cabs & Car rentals</option>
+                        <option value="Caterers">Caterers</option>
+                        <option value="Chemists">Chemists</option>
+                        <option value="Civil-Contractors">Civil Contractors</option>
+                        <option value="Courier">Courier</option>
+                        <option value="Daily-Needs">Daily Needs</option>
+                        <option value="Dance-Music">Dance & Music</option>
+                        <option value="Doctor">Doctor</option>
+                        <option value="Education">Education</option>
+                        <option value="Emergency">Emergency</option>
+                        <option value="Event-Organizer">Event Organizer</option>
+                        <option value="Fitness">Fitness</option>
+                        <option value="Flights">Flights</option>
+                        <option value="Foreign-Exchange">Foreign Exchange</option>
+                        <option value="Flowers">Flowers</option>
+                        <option value="Home-Decor">Home Decor</option>
+                        <option value="Home-Improvements">Home Improvements</option>
+                        <option value="Hospitals">Hospitals</option>
+                        <option value="House-Keeping">House Keeping</option>
+                        <option value="Industrial">Industrial Products</option>
+                        <option value="Insurance">Insurance</option>
+                        <option value="Interior-Designer">Interior Designer</option>
+                        <option value="International-SIM-Card">International SIM Card</option>
+                        <option value="Internet">Internet</option>
+                        <option value="Jewellery">Jewellery</option>
+                        <option value="Labs">Labs</option>
+                        <option value="Language-Classes">Language Classes</option>
+                        <option value="Loan-Credit-Card">Loan & Credit Card</option>
+                        <option value="Medical">Medical</option>
+                        <option value="Modular-Kitchen">Modular Kitchen</option>
+                        <option value="On-Demand-Services">On Demand Services</option>
+                        <option value="Packers-and-Movers">Packers and Movers</option>
+                        <option value="Party">Party</option>
+                        <option value="Personal-Care">Personal Care</option>
+                        <option value="Books">Books</option>
+                        <option value="Pet-and-Pet-Care">Pet and Pet Care</option>
+                        <option value="Real-Estate">Real Estate</option>
+                        <option value="Repairs">Repairs</option>
+                        <option value="Restaurants">Restaurants</option>
+                        <option value="Security-Services">Security Services</option>
+                        <option value="Sports-Coach">Sports Coach</option>
+                        <option value="Sports-Goods">Sports Goods</option>
+                        <option value="Train">Train</option>
+                        <option value="Training-Institute">Training Institute</option>
+                        <option value="Transporters">Transporters</option>
+                        <option value="Wedding">Wedding</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <input name="BusinessName" type="text" placeholder="Business Name">
+                </div>
+                <div class="col-md-6">
+                    <input name="OwnerName" type="text" placeholder="Full Name">
+                </div>
+                <div class="col-md-6">
+                    <input name="OwnerEmail" type="email" placeholder="Enter Email">
+                </div>
+            </div>
+
+
+        </div>
+        <div class="tab">
+            <center>
+                <h3>Address Info.</h3>
+            </center>
+            <div class="row">
+                <div class="col-md-6">
+                    <input name="Refno" type="number" placeholder="Enter RefNo.">
+                </div>
+                <div class="col-md-6">
+                    <input   name="Address" type="text" placeholder="Enter Address">
+                </div>
+                <div class="col-md-6">
+                    <select onchange="print_city('state', this.selectedIndex);" id="sts" name="state" class="form-control"
+                        required></select>
+                </div>
+                <div class="col-md-6">
+                    <select id="state" name="city" class="form-control" required></select>
+                </div>
+                <!-- <center class="home-del-section">
+                    <h3>Home Delivery</h3>
+                    <h6>Do you want to Home deliver your product</h6>
+                    <div class="form-group">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </center> -->
+            </div>
+
+        </div>
+        <div class="tab">
+            <center>
+                <h3>Other Requirements</h3>
+            </center>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" name="OpeningTime" id="" placeholder="Opening Time">
+                    <input type="text" name="ClosingTime" id="" placeholder="Closing Time">
+                    <input type="text" name="Discription" id="" placeholder="Buisness Description" >
+                    <center class="upload-sec">
+                        <h5>Please upload some pictures related to your buisness here.</h5>
+                        <label class="custom-file-upload ">
+                            <input class="input-img" type="file" id="img" name="Images" accept="image/*" multiple>
+                            Upload Your Images
+                        </label>
+                    </center>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/Tech Life - Remote Life.png" class="img-response" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="tab">
+            <center>
+                <h3>Payment Portal</h3>
+                <h6>Check out our subscription plan</h6>
+                  <input placeholder="Amount" type="number" name="Amount">
+                <input placeholder="payment method" name="Payment" type="password">
+            </center>
+
+        </div>
+        <div style="overflow:auto;">
+            <center>
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            </center>
+        </div>
+
+    </form>
+    <%- include("footer") -%>
+
+
+    <script language="javascript">print_state("sts");</script>
+    <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+
+        function showTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+            }
+            //... and run a function that will display the correct step indicator:
+            fixStepIndicator(n)
+        }
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form...
+            if (currentTab >= x.length) {
+                // ... the form gets submitted:
+                document.getElementById("regForm").submit();
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            // This function deals with validation of the form fields
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            // A loop that checks every input field in the current tab:
+            for (i = 0; i < y.length; i++) {
+                // If a field is empty...
+                if (y[i].value == "") {
+                    // add an "invalid" class to the field:
+                    y[i].className += " invalid";
+                    // and set the current valid status to false
+                    valid = false;
+                }
+            }
+            // If the valid status is true, mark the step as finished and valid:
+            if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+            }
+            return valid; // return the valid status
+        }
+
+        function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class on the current step:
+            x[n].className += " active";
+        }
+
+
+        let digitValidate = function(ele){
+  console.log(ele.value);
+  ele.value = ele.value.replace(/[^0-9]/g,'');
+}
+
+let tabChange = function(val){
+    let ele = document.querySelectorAll('input');
+    if(ele[val-1].value != ''){
+      ele[val].focus()
+    }else if(ele[val-1].value == ''){
+      ele[val-2].focus()
+    }
+ }
+
+
+    </script>
+
+</body>
+
+</html>

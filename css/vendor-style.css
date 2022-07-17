@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('assets/nathan-dumlao-LTDuGUByp6Y-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+#regForm {
+    background-color: #ffffff;
+    margin: 100px auto;
+    font-family: Raleway;
+    padding: 40px;
+    width: 50%;
+    min-width: 300px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    margin: 20px 0px;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+}
+
+select {
+    padding: 10px !important;
+    width: 100% !important;
+    margin: 20px 0px !important;
+    font-size: 17px !important;
+    font-family: Raleway !important;
+    border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+    background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+    display: none;
+}
+
+button {
+    background-color: #5cb85c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#prevBtn {
+    background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 10px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    background-color: #92d9bf;
+    opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+    opacity: 1;
+    background-color: #5cb85c;
+}
+
+.home-del-section {
+    margin-bottom: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #5cb85c;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #5cb85c;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    /* only if you want fixed height */
+}
+
+.img-response {
+    width: 100%;
+    height: auto;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.upload-sec {
+    margin-top: 2rem;
+}
+
+.img-response {
+    width: 100%;
+    height: auto;
+}
+
+hr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color: #555555;
+    border-width: 5px;
+    width: 5%;
+    margin: 4% auto;
+
+}
+
+/*class*/
+.logo {
+    height: 70px;
+}
+
+.navbar {
+    background-color: #fff;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: rgb(49, 54, 92);
+    padding-left: 20px;
+}
+
+.Setu {
+    color: rgb(20, 144, 143);
+}
+
+.nav-link {
+    font-weight: 100;
+    margin: 0px 20px 0px 20px;
+}
+
+.col {
+    padding: 0px;
+}
+
+.home-top {
+    background-image: radial-gradient(circle farthest-corner at 5.6% 54.5%, rgba(47, 71, 79, 1) 0%, rgba(159, 188, 198, 1) 83.6%);
+}
+
+.home-title {
+    padding: 4rem 0px 1rem;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+
+.home-search {
+    padding: 0px 0px 5rem;
+}
+
+
+.footer {
+    text-align: center;
+    background-color: black;
+}
+
+.getconnected {
+    padding: 3%;
+}
+
+.givefeedbackbutton {
+    margin-bottom: 4%;
+    padding-bottom: 4%;
+}
+
+.otp{
+        display:inline-block;
+        width:50px;
+        height:50px;
+        text-align:center;
+    
+}
